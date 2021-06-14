@@ -14,6 +14,3 @@ Desenvolvido com a arquitetura MVC, é um e-commerce de venda de açaí que poss
 6. MySQL
 7. XAMPP
 
-
-
-![](C:\Users\Ana Carolina\OneDrive\Área de Trabalho\Api_Acai.gif)
