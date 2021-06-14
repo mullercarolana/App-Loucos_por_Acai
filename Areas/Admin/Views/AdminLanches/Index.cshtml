@@ -1,0 +1,75 @@
+@model IEnumerable<App_Loucos_por_Acai.Models.Lanche>
+
+<main role="main" class="container bg-light text-dark px-4 py-5 text-center">
+
+    <div class="starter-template">
+        <h1 class="display-5 fw-bold">Controlador de Lanches</h1>
+    </div>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a asp-action="Create">
+            <button type="button" class="btn btn-primary btn-sm px-4 me-sm-3 fw-bold">Criar Novo Lanche</button>
+        </a>
+    </div>
+</main>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LancheId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoComplementos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsLanchePreferido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmEstoque)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LancheId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescricaoComplementos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsLanchePreferido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmEstoque)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.LancheId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.LancheId">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.LancheId">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

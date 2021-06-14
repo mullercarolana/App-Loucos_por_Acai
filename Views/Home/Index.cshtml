@@ -1,0 +1,19 @@
+﻿@model HomeViewModel
+
+<partial name="_Heroes" />
+
+<!-- PAGE CONTENT -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">Os Preferidos da Semana:</h1>
+    </div>
+</main>
+
+<main>
+    <div class="row">
+        @foreach (var lanche in Model.LanchesPreferidos)
+        {
+            <partial name="_LanchesResumo" for="@lanche" />
+        }
+    </div>
+</main>

@@ -1,0 +1,51 @@
+@model IEnumerable<App_Loucos_por_Acai.Models.PedidoDetalhe>
+
+<main role="main" class="container bg-light text-dark px-4 py-5 text-center">
+
+    <div class="starter-template">
+        <h1 class="display-5 fw-bold">Controlador de Pedidos</h1>
+    </div>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a asp-action="Index">
+            <button type="button" class="btn btn-primary btn-sm px-4 me-sm-3 fw-bold">Retornar para Lista</button>
+        </a>
+    </div>
+</main>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PedidoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LancheId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PedidoId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LancheId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

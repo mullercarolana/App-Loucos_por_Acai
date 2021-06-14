@@ -1,0 +1,21 @@
+@model LancheListViewModel
+
+<!-- HEROES -->
+<main role="main" class="container bg-light text-dark px-4 py-5 text-center">
+    <div class="starter-template">
+        <h1 class="display-5 fw-bold">Carrinho de Compras</h1>
+        <p class="lead">Selecione abaixo o tamanho do seu açaí, com os quatro itens de acompanhamento inclusos.</p>
+    </div>
+</main>
+
+<main>
+    <div>
+        <h2>@Model.CategoriaAtual</h2>
+    </div>
+</main>
+
+@foreach (var lanche in Model.Lanches)
+{
+    //PARTIAL VIEW PARA AS VERSÕES ACIMA DE 3.1
+    <partial name="_lanchesResumo" for="@lanche" />
+}

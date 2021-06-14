@@ -1,0 +1,59 @@
+@model App_Loucos_por_Acai.Models.Lanche
+
+<main role="main" class="container bg-light text-dark px-4 py-5 text-center">
+
+    <div class="starter-template">
+        <h1 class="display-5 fw-bold">Deletar Lanche</h1>
+    </div>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a asp-action="Index">
+            <button type="button" class="btn btn-primary btn-sm px-4 me-sm-3 fw-bold">Retornar para Lista</button>
+        </a>
+    </div>
+</main>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoComplementos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoComplementos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsLanchePreferido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsLanchePreferido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmEstoque)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmEstoque)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.CategoriaNome)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" class="btn btn-danger btn-sm px-4 me-sm-3 fw-bold">
+        <input type="hidden" asp-for="LancheId" />
+        <input type="submit" value="Deletar" class="btn btn-default" />
+    </form>
+</div>

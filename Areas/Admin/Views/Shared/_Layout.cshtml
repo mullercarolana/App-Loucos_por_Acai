@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - App_Loucos_por_Açaí</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- FLAVICON ICO -->
+    <link rel="shortcut icon" href="Image/favicon.ico" type="image/x-icon">
+    <!--Font Awesome CSS-->
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a asp-area="Admin" asp-controller="Admin" asp-action="Index" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a asp-area="Admin" asp-controller="AdminLanches" asp-action="Index" class="nav-link px-2 text-secondary">Lanches</a></li>
+                    <li><a asp-area="Admin" asp-controller="AdminPedidos" asp-action="Index" class="nav-link px-2 text-secondary">Pedidos</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- RAZOR -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container py-5 ">
+        <div class="row">
+            <div class="col-3 col-md">
+                <small class="d-block mb-3 text-muted"> Todos os direitos reservados Ana Carolina Müller &copy; 2021
+                </small>
+            </div>
+            <div class="col-3 col-md">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+
+                    <!-- Whatsapp -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #00E083;" href="https://api.whatsapp.com/send?phone=5551997362632&text=Ol%C3%A1!%20Agradecemos%20a%20sua%20Prefer%C3%AAncia!%20" target="_blank"
+                        role="button"><i class="fab fa-whatsapp"></i></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="https://linkedin.com/in/mullercarolana" target="_blank"
+                        role="button"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="https://github.com/mullercarolana" target="_blank"
+                        role="button"><i class="fab fa-github"></i></a>
+                </section>
+            </div>
+            <div class="col-3 col-md">
+                <h5>Informações</h5>
+                <ul class="list-unstyled text-small">
+                    <li>CNPJ: 00.000.000/0001-00</li>
+                    <li>Endereço: Rua Farroupilha nº 450, Centro, Estância Velha / RS - CEP 93600-240</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
