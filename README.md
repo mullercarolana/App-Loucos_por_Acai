@@ -1,4 +1,4 @@
-# E-Commerce Loucos por Açaí :woman_teacher:
+# E-Commerce Loucos por Açaí :woman_technologist:
 
 ### O que é?
 
